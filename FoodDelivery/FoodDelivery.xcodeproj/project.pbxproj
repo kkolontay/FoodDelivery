@@ -13,6 +13,15 @@
 		D0E5FC031CB152F30093D9E2 /* FoodDelivery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC011CB152F30093D9E2 /* FoodDelivery.xcdatamodeld */; };
 		D0E5FC051CB152F30093D9E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC041CB152F30093D9E2 /* Assets.xcassets */; };
 		D0E5FC081CB152F30093D9E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC061CB152F30093D9E2 /* LaunchScreen.storyboard */; };
+		D0E5FC101CB159B40093D9E2 /* FDCellCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC0F1CB159B40093D9E2 /* FDCellCollectionView.swift */; };
+		D0E5FC121CB15A2A0093D9E2 /* FDCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC111CB15A2A0093D9E2 /* FDCollectionViewController.swift */; };
+		D0E5FC181CB18C540093D9E2 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC171CB18C540093D9E2 /* Menu.png */; };
+		D0E5FC1B1CB19CAB0093D9E2 /* chickenLamb.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC1A1CB19CAB0093D9E2 /* chickenLamb.png */; };
+		D0E5FC1D1CB19CD50093D9E2 /* dessert.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC1C1CB19CD50093D9E2 /* dessert.png */; };
+		D0E5FC1F1CB19CE80093D9E2 /* starter.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC1E1CB19CE80093D9E2 /* starter.png */; };
+		D0E5FC211CB19D010093D9E2 /* soup.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC201CB19D010093D9E2 /* soup.png */; };
+		D0E5FC231CB19D0C0093D9E2 /* salad.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC221CB19D0C0093D9E2 /* salad.png */; };
+		D0E5FC251CB1A1670093D9E2 /* FDFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		D0E5FC041CB152F30093D9E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0E5FC071CB152F30093D9E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0E5FC091CB152F30093D9E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E5FC0F1CB159B40093D9E2 /* FDCellCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCellCollectionView.swift; sourceTree = "<group>"; };
+		D0E5FC111CB15A2A0093D9E2 /* FDCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCollectionViewController.swift; sourceTree = "<group>"; };
+		D0E5FC171CB18C540093D9E2 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
+		D0E5FC1A1CB19CAB0093D9E2 /* chickenLamb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chickenLamb.png; sourceTree = "<group>"; };
+		D0E5FC1C1CB19CD50093D9E2 /* dessert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dessert.png; sourceTree = "<group>"; };
+		D0E5FC1E1CB19CE80093D9E2 /* starter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starter.png; sourceTree = "<group>"; };
+		D0E5FC201CB19D010093D9E2 /* soup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soup.png; sourceTree = "<group>"; };
+		D0E5FC221CB19D0C0093D9E2 /* salad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salad.png; sourceTree = "<group>"; };
+		D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDFetchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 		D0E5FBF91CB152F30093D9E2 /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				D0E5FC131CB18BEC0093D9E2 /* Picture */,
 				D0E5FBFA1CB152F30093D9E2 /* AppDelegate.swift */,
 				D0E5FBFC1CB152F30093D9E2 /* ViewController.swift */,
 				D0E5FBFE1CB152F30093D9E2 /* Main.storyboard */,
@@ -63,8 +82,40 @@
 				D0E5FC061CB152F30093D9E2 /* LaunchScreen.storyboard */,
 				D0E5FC091CB152F30093D9E2 /* Info.plist */,
 				D0E5FC011CB152F30093D9E2 /* FoodDelivery.xcdatamodeld */,
+				D0E5FC0F1CB159B40093D9E2 /* FDCellCollectionView.swift */,
+				D0E5FC111CB15A2A0093D9E2 /* FDCollectionViewController.swift */,
+				D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */,
 			);
 			path = FoodDelivery;
+			sourceTree = "<group>";
+		};
+		D0E5FC131CB18BEC0093D9E2 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5FC191CB1990A0093D9E2 /* FirstScreen */,
+				D0E5FC141CB18BF80093D9E2 /* Icon */,
+			);
+			name = Picture;
+			sourceTree = "<group>";
+		};
+		D0E5FC141CB18BF80093D9E2 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5FC171CB18C540093D9E2 /* Menu.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		D0E5FC191CB1990A0093D9E2 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5FC1C1CB19CD50093D9E2 /* dessert.png */,
+				D0E5FC1E1CB19CE80093D9E2 /* starter.png */,
+				D0E5FC1A1CB19CAB0093D9E2 /* chickenLamb.png */,
+				D0E5FC201CB19D010093D9E2 /* soup.png */,
+				D0E5FC221CB19D0C0093D9E2 /* salad.png */,
+			);
+			name = FirstScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +176,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E5FC181CB18C540093D9E2 /* Menu.png in Resources */,
 				D0E5FC081CB152F30093D9E2 /* LaunchScreen.storyboard in Resources */,
+				D0E5FC211CB19D010093D9E2 /* soup.png in Resources */,
 				D0E5FC051CB152F30093D9E2 /* Assets.xcassets in Resources */,
 				D0E5FC001CB152F30093D9E2 /* Main.storyboard in Resources */,
+				D0E5FC1D1CB19CD50093D9E2 /* dessert.png in Resources */,
+				D0E5FC1B1CB19CAB0093D9E2 /* chickenLamb.png in Resources */,
+				D0E5FC1F1CB19CE80093D9E2 /* starter.png in Resources */,
+				D0E5FC231CB19D0C0093D9E2 /* salad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +197,10 @@
 			files = (
 				D0E5FC031CB152F30093D9E2 /* FoodDelivery.xcdatamodeld in Sources */,
 				D0E5FBFD1CB152F30093D9E2 /* ViewController.swift in Sources */,
+				D0E5FC251CB1A1670093D9E2 /* FDFetchData.swift in Sources */,
+				D0E5FC101CB159B40093D9E2 /* FDCellCollectionView.swift in Sources */,
 				D0E5FBFB1CB152F30093D9E2 /* AppDelegate.swift in Sources */,
+				D0E5FC121CB15A2A0093D9E2 /* FDCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
