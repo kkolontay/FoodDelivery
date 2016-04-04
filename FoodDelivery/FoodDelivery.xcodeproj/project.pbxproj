@@ -22,6 +22,9 @@
 		D0E5FC211CB19D010093D9E2 /* soup.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC201CB19D010093D9E2 /* soup.png */; };
 		D0E5FC231CB19D0C0093D9E2 /* salad.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC221CB19D0C0093D9E2 /* salad.png */; };
 		D0E5FC251CB1A1670093D9E2 /* FDFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */; };
+		D0E5FC271CB233FA0093D9E2 /* FDDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC261CB233FA0093D9E2 /* FDDetailList.swift */; };
+		D0E5FC291CB2364F0093D9E2 /* FDDetailCellDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC281CB2364F0093D9E2 /* FDDetailCellDish.swift */; };
+		D0E5FC2B1CB244350093D9E2 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC2A1CB244350093D9E2 /* arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		D0E5FC201CB19D010093D9E2 /* soup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soup.png; sourceTree = "<group>"; };
 		D0E5FC221CB19D0C0093D9E2 /* salad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salad.png; sourceTree = "<group>"; };
 		D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDFetchData.swift; sourceTree = "<group>"; };
+		D0E5FC261CB233FA0093D9E2 /* FDDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDDetailList.swift; sourceTree = "<group>"; };
+		D0E5FC281CB2364F0093D9E2 /* FDDetailCellDish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDDetailCellDish.swift; sourceTree = "<group>"; };
+		D0E5FC2A1CB244350093D9E2 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 				D0E5FC0F1CB159B40093D9E2 /* FDCellCollectionView.swift */,
 				D0E5FC111CB15A2A0093D9E2 /* FDCollectionViewController.swift */,
 				D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */,
+				D0E5FC261CB233FA0093D9E2 /* FDDetailList.swift */,
+				D0E5FC281CB2364F0093D9E2 /* FDDetailCellDish.swift */,
 			);
 			path = FoodDelivery;
 			sourceTree = "<group>";
@@ -92,6 +100,7 @@
 		D0E5FC131CB18BEC0093D9E2 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				D0E5FC2A1CB244350093D9E2 /* arrow.png */,
 				D0E5FC191CB1990A0093D9E2 /* FirstScreen */,
 				D0E5FC141CB18BF80093D9E2 /* Icon */,
 			);
@@ -179,6 +188,7 @@
 				D0E5FC181CB18C540093D9E2 /* Menu.png in Resources */,
 				D0E5FC081CB152F30093D9E2 /* LaunchScreen.storyboard in Resources */,
 				D0E5FC211CB19D010093D9E2 /* soup.png in Resources */,
+				D0E5FC2B1CB244350093D9E2 /* arrow.png in Resources */,
 				D0E5FC051CB152F30093D9E2 /* Assets.xcassets in Resources */,
 				D0E5FC001CB152F30093D9E2 /* Main.storyboard in Resources */,
 				D0E5FC1D1CB19CD50093D9E2 /* dessert.png in Resources */,
@@ -196,10 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E5FC031CB152F30093D9E2 /* FoodDelivery.xcdatamodeld in Sources */,
+				D0E5FC271CB233FA0093D9E2 /* FDDetailList.swift in Sources */,
 				D0E5FBFD1CB152F30093D9E2 /* ViewController.swift in Sources */,
 				D0E5FC251CB1A1670093D9E2 /* FDFetchData.swift in Sources */,
 				D0E5FC101CB159B40093D9E2 /* FDCellCollectionView.swift in Sources */,
 				D0E5FBFB1CB152F30093D9E2 /* AppDelegate.swift in Sources */,
+				D0E5FC291CB2364F0093D9E2 /* FDDetailCellDish.swift in Sources */,
 				D0E5FC121CB15A2A0093D9E2 /* FDCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
