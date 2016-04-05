@@ -25,6 +25,15 @@
 		D0E5FC271CB233FA0093D9E2 /* FDDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC261CB233FA0093D9E2 /* FDDetailList.swift */; };
 		D0E5FC291CB2364F0093D9E2 /* FDDetailCellDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FC281CB2364F0093D9E2 /* FDDetailCellDish.swift */; };
 		D0E5FC2B1CB244350093D9E2 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FC2A1CB244350093D9E2 /* arrow.png */; };
+		D0F02CF71CB3ED3B002AE6E6 /* Minus.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F02CF61CB3ED3B002AE6E6 /* Minus.png */; };
+		D0F02CF91CB3ED4F002AE6E6 /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F02CF81CB3ED4F002AE6E6 /* Plus.png */; };
+		D0F02CFB1CB40B3F002AE6E6 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F02CFA1CB40B3F002AE6E6 /* Delete.png */; };
+		D0F02D171CB46096002AE6E6 /* MainDishes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F02D111CB46096002AE6E6 /* MainDishes+CoreDataProperties.swift */; };
+		D0F02D181CB46096002AE6E6 /* MainDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F02D121CB46096002AE6E6 /* MainDishes.swift */; };
+		D0F02D191CB46096002AE6E6 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F02D131CB46096002AE6E6 /* Order+CoreDataProperties.swift */; };
+		D0F02D1A1CB46096002AE6E6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F02D141CB46096002AE6E6 /* Order.swift */; };
+		D0F02D1B1CB46096002AE6E6 /* ItemDish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F02D151CB46096002AE6E6 /* ItemDish+CoreDataProperties.swift */; };
+		D0F02D1C1CB46096002AE6E6 /* ItemDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F02D161CB46096002AE6E6 /* ItemDish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,15 @@
 		D0E5FC261CB233FA0093D9E2 /* FDDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDDetailList.swift; sourceTree = "<group>"; };
 		D0E5FC281CB2364F0093D9E2 /* FDDetailCellDish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDDetailCellDish.swift; sourceTree = "<group>"; };
 		D0E5FC2A1CB244350093D9E2 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		D0F02CF61CB3ED3B002AE6E6 /* Minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus.png; sourceTree = "<group>"; };
+		D0F02CF81CB3ED4F002AE6E6 /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
+		D0F02CFA1CB40B3F002AE6E6 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		D0F02D111CB46096002AE6E6 /* MainDishes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainDishes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0F02D121CB46096002AE6E6 /* MainDishes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDishes.swift; sourceTree = "<group>"; };
+		D0F02D131CB46096002AE6E6 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0F02D141CB46096002AE6E6 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		D0F02D151CB46096002AE6E6 /* ItemDish+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemDish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0F02D161CB46096002AE6E6 /* ItemDish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +98,10 @@
 		D0E5FBF91CB152F30093D9E2 /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				D0F02D101CB46073002AE6E6 /* Data */,
+				D0F02CF11CB3EAD5002AE6E6 /* Order */,
+				D0F02CF01CB3EAC8002AE6E6 /* ListDishes */,
+				D0F02CEF1CB3EABE002AE6E6 /* FirstScrren */,
 				D0E5FC131CB18BEC0093D9E2 /* Picture */,
 				D0E5FBFA1CB152F30093D9E2 /* AppDelegate.swift */,
 				D0E5FBFC1CB152F30093D9E2 /* ViewController.swift */,
@@ -88,11 +110,6 @@
 				D0E5FC061CB152F30093D9E2 /* LaunchScreen.storyboard */,
 				D0E5FC091CB152F30093D9E2 /* Info.plist */,
 				D0E5FC011CB152F30093D9E2 /* FoodDelivery.xcdatamodeld */,
-				D0E5FC0F1CB159B40093D9E2 /* FDCellCollectionView.swift */,
-				D0E5FC111CB15A2A0093D9E2 /* FDCollectionViewController.swift */,
-				D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */,
-				D0E5FC261CB233FA0093D9E2 /* FDDetailList.swift */,
-				D0E5FC281CB2364F0093D9E2 /* FDDetailCellDish.swift */,
 			);
 			path = FoodDelivery;
 			sourceTree = "<group>";
@@ -100,7 +117,10 @@
 		D0E5FC131CB18BEC0093D9E2 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				D0F02CF81CB3ED4F002AE6E6 /* Plus.png */,
+				D0F02CF61CB3ED3B002AE6E6 /* Minus.png */,
 				D0E5FC2A1CB244350093D9E2 /* arrow.png */,
+				D0F02CFA1CB40B3F002AE6E6 /* Delete.png */,
 				D0E5FC191CB1990A0093D9E2 /* FirstScreen */,
 				D0E5FC141CB18BF80093D9E2 /* Icon */,
 			);
@@ -125,6 +145,45 @@
 				D0E5FC221CB19D0C0093D9E2 /* salad.png */,
 			);
 			name = FirstScreen;
+			sourceTree = "<group>";
+		};
+		D0F02CEF1CB3EABE002AE6E6 /* FirstScrren */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5FC0F1CB159B40093D9E2 /* FDCellCollectionView.swift */,
+				D0E5FC111CB15A2A0093D9E2 /* FDCollectionViewController.swift */,
+				D0E5FC241CB1A1670093D9E2 /* FDFetchData.swift */,
+			);
+			name = FirstScrren;
+			sourceTree = "<group>";
+		};
+		D0F02CF01CB3EAC8002AE6E6 /* ListDishes */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5FC281CB2364F0093D9E2 /* FDDetailCellDish.swift */,
+				D0E5FC261CB233FA0093D9E2 /* FDDetailList.swift */,
+			);
+			name = ListDishes;
+			sourceTree = "<group>";
+		};
+		D0F02CF11CB3EAD5002AE6E6 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Order;
+			sourceTree = "<group>";
+		};
+		D0F02D101CB46073002AE6E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D0F02D111CB46096002AE6E6 /* MainDishes+CoreDataProperties.swift */,
+				D0F02D121CB46096002AE6E6 /* MainDishes.swift */,
+				D0F02D131CB46096002AE6E6 /* Order+CoreDataProperties.swift */,
+				D0F02D141CB46096002AE6E6 /* Order.swift */,
+				D0F02D151CB46096002AE6E6 /* ItemDish+CoreDataProperties.swift */,
+				D0F02D161CB46096002AE6E6 /* ItemDish.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +247,10 @@
 				D0E5FC181CB18C540093D9E2 /* Menu.png in Resources */,
 				D0E5FC081CB152F30093D9E2 /* LaunchScreen.storyboard in Resources */,
 				D0E5FC211CB19D010093D9E2 /* soup.png in Resources */,
+				D0F02CF91CB3ED4F002AE6E6 /* Plus.png in Resources */,
+				D0F02CF71CB3ED3B002AE6E6 /* Minus.png in Resources */,
 				D0E5FC2B1CB244350093D9E2 /* arrow.png in Resources */,
+				D0F02CFB1CB40B3F002AE6E6 /* Delete.png in Resources */,
 				D0E5FC051CB152F30093D9E2 /* Assets.xcassets in Resources */,
 				D0E5FC001CB152F30093D9E2 /* Main.storyboard in Resources */,
 				D0E5FC1D1CB19CD50093D9E2 /* dessert.png in Resources */,
@@ -205,13 +267,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F02D1B1CB46096002AE6E6 /* ItemDish+CoreDataProperties.swift in Sources */,
+				D0F02D181CB46096002AE6E6 /* MainDishes.swift in Sources */,
+				D0F02D1C1CB46096002AE6E6 /* ItemDish.swift in Sources */,
 				D0E5FC031CB152F30093D9E2 /* FoodDelivery.xcdatamodeld in Sources */,
 				D0E5FC271CB233FA0093D9E2 /* FDDetailList.swift in Sources */,
 				D0E5FBFD1CB152F30093D9E2 /* ViewController.swift in Sources */,
 				D0E5FC251CB1A1670093D9E2 /* FDFetchData.swift in Sources */,
 				D0E5FC101CB159B40093D9E2 /* FDCellCollectionView.swift in Sources */,
+				D0F02D1A1CB46096002AE6E6 /* Order.swift in Sources */,
 				D0E5FBFB1CB152F30093D9E2 /* AppDelegate.swift in Sources */,
 				D0E5FC291CB2364F0093D9E2 /* FDDetailCellDish.swift in Sources */,
+				D0F02D171CB46096002AE6E6 /* MainDishes+CoreDataProperties.swift in Sources */,
+				D0F02D191CB46096002AE6E6 /* Order+CoreDataProperties.swift in Sources */,
 				D0E5FC121CB15A2A0093D9E2 /* FDCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,10 +393,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kkolontay.FoodDelivery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodDelivery-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -336,10 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kkolontay.FoodDelivery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodDelivery-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -362,6 +435,7 @@
 				D0E5FC0E1CB152F30093D9E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

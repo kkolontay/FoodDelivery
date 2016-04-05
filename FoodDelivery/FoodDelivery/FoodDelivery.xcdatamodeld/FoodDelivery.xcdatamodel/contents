@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="MainDishes" syncable="YES">
+    <entity name="ItemDish" representedClassName="ItemDish" syncable="YES">
+        <attribute name="descriptionDish" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="picture" attributeType="String" syncable="YES"/>
+        <attribute name="price" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="itemDishOrder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="orderItemDish" inverseEntity="Order" syncable="YES"/>
+        <relationship name="itemDishToMainDishes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MainDishes" inverseName="mainDishesToItemDish" inverseEntity="MainDishes" syncable="YES"/>
+    </entity>
+    <entity name="MainDishes" representedClassName="MainDishes" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="nameOfFilePicture" attributeType="String" syncable="YES"/>
+        <relationship name="mainDishesToItemDish" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemDish" inverseName="itemDishToMainDishes" inverseEntity="ItemDish" syncable="YES"/>
+    </entity>
+    <entity name="Order" representedClassName="Order" syncable="YES">
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="orderItemDish" maxCount="1" deletionRule="Nullify" destinationEntity="ItemDish" inverseName="itemDishOrder" inverseEntity="ItemDish" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MainDishes" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="MainDishes" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="ItemDish" positionX="-63" positionY="0" width="128" height="135"/>
+        <element name="Order" positionX="-45" positionY="45" width="128" height="75"/>
     </elements>
 </model>
