@@ -20,24 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func addTestData() {
-        guard let entityMainDishes = NSEntityDescription.entityForName("MainDishes", inManagedObjectContext: managedObjectContext) else {
-            fatalError("Could not find entity description")
-        }
-        var mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
-        mainDishes.setValue("starter.png", forKey: "nameOfFilePicture")
-        mainDishes.setValue("Starters", forKey: "name")
-        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
-        mainDishes.setValue("salad.png", forKey: "nameOfFilePicture")
-        mainDishes.setValue("Salad", forKey: "name")
-        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
-        mainDishes.setValue("soup.png", forKey: "nameOfFilePicture")
-        mainDishes.setValue("Soup", forKey: "name")
-        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
-        mainDishes.setValue("chickenLamb.png", forKey: "nameOfFilePicture")
-        mainDishes.setValue("Chicken and Lamb", forKey: "name")
-        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
-        mainDishes.setValue("dessert.png", forKey: "nameOfFilePicture")
-        mainDishes.setValue("Desserts", forKey: "name")
+        let _ = FDInitCoreData()
+//        guard let entityMainDishes = NSEntityDescription.entityForName("MainDishes", inManagedObjectContext: managedObjectContext) else {
+//            fatalError("Could not find entity description")
+//        }
+//        var mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
+//        mainDishes.setValue("starter.png", forKey: "nameOfFilePicture")
+//        mainDishes.setValue("Starters", forKey: "name")
+//        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
+//        mainDishes.setValue("salad.png", forKey: "nameOfFilePicture")
+//        mainDishes.setValue("Salad", forKey: "name")
+//        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
+//        mainDishes.setValue("soup.png", forKey: "nameOfFilePicture")
+//        mainDishes.setValue("Soup", forKey: "name")
+//        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
+//        mainDishes.setValue("chickenLamb.png", forKey: "nameOfFilePicture")
+//        mainDishes.setValue("Chicken and Lamb", forKey: "name")
+//        mainDishes = NSManagedObject(entity: entityMainDishes, insertIntoManagedObjectContext: managedObjectContext)
+//        mainDishes.setValue("dessert.png", forKey: "nameOfFilePicture")
+//        mainDishes.setValue("Desserts", forKey: "name")
     }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

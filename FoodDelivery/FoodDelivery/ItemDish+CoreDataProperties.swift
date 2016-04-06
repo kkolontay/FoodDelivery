@@ -14,11 +14,13 @@ import CoreData
 
 extension ItemDish {
 
+    @NSManaged var descriptionDish: String?
+    @NSManaged var hasNats: NSNumber?
     @NSManaged var name: String?
     @NSManaged var picture: String?
-    @NSManaged var descriptionDish: String?
     @NSManaged var price: NSNumber?
-    @NSManaged var itemDishToMainDishes: NSSet?
+    @NSManaged var vegeterian: NSNumber?
     @NSManaged var itemDishOrder: Order?
+    @NSManaged var itemDishToMainDishes: MainDishes?
 
 }

@@ -16,6 +16,6 @@ extension MainDishes {
 
     @NSManaged var name: String?
     @NSManaged var nameOfFilePicture: String?
-    @NSManaged var mainDishesToItemDish: ItemDish?
+    @NSManaged var mainDishesToItemDish: NSSet?
 
 }

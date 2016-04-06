@@ -9,6 +9,13 @@
 import UIKit
 import CoreData
 
+class FDGetPicture {
+    static func getPicture(imageName: String) -> UIImage {
+        let urlPath = NSBundle.mainBundle().pathForResource(imageName, ofType: "png")
+        return UIImage(contentsOfFile: urlPath!)!
+    }
+}
+
 class FDFetchData: NSObject {
     private var images: [UIImage]?
     private var nameDish: [String]?
@@ -24,7 +31,7 @@ class FDFetchData: NSObject {
                 for result in results {
                     if let itemNameDishe = result.valueForKey("name") as? String, let nameImage = result.valueForKey("nameOfFilePicture") as? String {
                         nameDish?.append(itemNameDishe)
-                        images?.append(getImage(nameImage))
+                        images?.append(FDGetPicture.getPicture(nameImage))
                     }
                 }
             }
@@ -32,10 +39,7 @@ class FDFetchData: NSObject {
             print ("Error fetched request")
         }
     }
-  private  func getImage(imageName: String) -> UIImage {
-        let urlPath = NSBundle.mainBundle().pathForResource(imageName, ofType: nil)
-        return UIImage(contentsOfFile: urlPath!)!
-    }
+
     func getImageAtIndex(index: Int) -> UIImage {
         return images![index]
     }

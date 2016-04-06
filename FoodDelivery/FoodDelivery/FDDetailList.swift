@@ -10,6 +10,8 @@ import UIKit
 
 
 class FDDetailListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor.redColor()
