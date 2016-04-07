@@ -24,6 +24,7 @@
 		D02E4AF11CB6A86400966A82 /* ItemDish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E4AEB1CB6A86400966A82 /* ItemDish+CoreDataProperties.swift */; };
 		D02E4AF21CB6A86400966A82 /* ItemDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E4AEC1CB6A86400966A82 /* ItemDish.swift */; };
 		D02E4AF41CB6AA1000966A82 /* FDInitCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E4AF31CB6AA1000966A82 /* FDInitCoreData.swift */; };
+		D043A7F51CB6EAAF00764007 /* FDFetchDataOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043A7F41CB6EAAF00764007 /* FDFetchDataOrder.swift */; };
 		D0E5FBFB1CB152F30093D9E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FBFA1CB152F30093D9E2 /* AppDelegate.swift */; };
 		D0E5FBFD1CB152F30093D9E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FBFC1CB152F30093D9E2 /* ViewController.swift */; };
 		D0E5FC001CB152F30093D9E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5FBFE1CB152F30093D9E2 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		D02E4AEB1CB6A86400966A82 /* ItemDish+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemDish+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D02E4AEC1CB6A86400966A82 /* ItemDish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDish.swift; sourceTree = "<group>"; };
 		D02E4AF31CB6AA1000966A82 /* FDInitCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDInitCoreData.swift; sourceTree = "<group>"; };
+		D043A7F41CB6EAAF00764007 /* FDFetchDataOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDFetchDataOrder.swift; sourceTree = "<group>"; };
 		D0E5FBF71CB152F30093D9E2 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5FBFA1CB152F30093D9E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E5FBFC1CB152F30093D9E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				D02E4AE11CB669FC00966A82 /* FDOrderTableViewController.swift */,
 				D02E4AE31CB66CA200966A82 /* FDOrderCellTableView.swift */,
+				D043A7F41CB6EAAF00764007 /* FDFetchDataOrder.swift */,
 			);
 			name = Order;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				D0E5FC271CB233FA0093D9E2 /* FDDetailList.swift in Sources */,
 				D0E5FBFD1CB152F30093D9E2 /* ViewController.swift in Sources */,
 				D0E5FC251CB1A1670093D9E2 /* FDFetchData.swift in Sources */,
+				D043A7F51CB6EAAF00764007 /* FDFetchDataOrder.swift in Sources */,
 				D02E4AF41CB6AA1000966A82 /* FDInitCoreData.swift in Sources */,
 				D0E5FC101CB159B40093D9E2 /* FDCellCollectionView.swift in Sources */,
 				D02E4AF11CB6A86400966A82 /* ItemDish+CoreDataProperties.swift in Sources */,

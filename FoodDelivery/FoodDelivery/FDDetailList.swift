@@ -20,7 +20,7 @@ class FDDetailListViewController: UIViewController, UITableViewDelegate, UITable
         
         navigationController?.navigationBar.barTintColor = UIColor.redColor()
         navigationController?.navigationBar.titleTextAttributes =
-            [NSForegroundColorAttributeName: UIColor.whiteColor(),  NSFontAttributeName: UIFont(name: "Arial", size: 27)!]
+            [NSForegroundColorAttributeName: UIColor.whiteColor(),  NSFontAttributeName: UIFont(name: "Arial", size: 20)!]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.topItem?.title = ""
         self.title = itemForDisplaying?.name ?? "This is Dish"

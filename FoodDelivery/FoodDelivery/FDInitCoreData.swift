@@ -27,8 +27,13 @@ class FDInitCoreData: NSObject {
         let myManagedContext = applicationDelegate.managedObjectContext
         return myManagedContext
     }()
-    static func getManagedObjects(entityNameEnter: String) -> [NSManagedObject] {
+    static func getManagedObjects(entityNameEnter: String, predicate: String? = nil, value: String? = nil ) -> [NSManagedObject] {
         let fetchRequest = NSFetchRequest(entityName: entityNameEnter)
+        //var predicateFetch: NSPredicate?
+        if predicate != nil {
+           let  fetchPredicat = NSPredicate(format: predicate!, value!)
+            fetchRequest.predicate = fetchPredicat
+        }
         var result = [NSManagedObject]()
         do {
             result = try FDInitCoreData.managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
