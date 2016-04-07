@@ -41,4 +41,16 @@ class FDCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("it's cool")
     }
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if segue!.identifier == "detailList" {
+            let detailList: FDDetailListViewController = segue!.destinationViewController as! FDDetailListViewController
+            let cell = sender as! UICollectionViewCell
+           // detailList.setItemDataFor(<#T##item: MainDishes##MainDishes#>)
+            let indexPath = self.collectionView.indexPathForCell(cell) //indexPathForSelectedRow()
+            detailList.setItemDataFor((fetchData?.getItemAtIndex((indexPath?.row)!))!)
+           // viewController.pinCode = self.exams[indexPath.row]
+            
+        }
+        
+    }
 }

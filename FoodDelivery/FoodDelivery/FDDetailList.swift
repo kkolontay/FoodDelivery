@@ -10,22 +10,35 @@ import UIKit
 
 
 class FDDetailListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    private var itemForDisplaying: MainDishes?
+    private var dataDetail: FDFetchDataDetailList?
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         navigationController?.navigationBar.barTintColor = UIColor.redColor()
         navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName: UIColor.whiteColor(),  NSFontAttributeName: UIFont(name: "Arial", size: 27)!]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.topItem?.title = ""
-        self.title = "Takeaway menu"
+        self.title = itemForDisplaying?.name ?? "This is Dish"
+    }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return (dataDetail?.fetchItemsCoutn())!
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellDish", forIndexPath: indexPath) as! FDDetailCellDish
+        cell.setItem((dataDetail?.getItemAtIndex(indexPath.row))!)
         return cell
+    }
+    func setItemDataFor(item: MainDishes) {
+        itemForDisplaying = item
+        let array = item.mainDishesToItemDish?.allObjects as! [ItemDish]
+                dataDetail = FDFetchDataDetailList(items: array)
     }
 }

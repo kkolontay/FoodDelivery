@@ -12,7 +12,7 @@ import CoreData
 class FDInitCoreData: NSObject {
     let nameFileFirstScreen = ["dessert", "starter", "chickenLamb", "soup", "salad"]
     let nameLabelFirstScreen = ["Desserts", "Starters", "Chicken and Lamb", "Soup", "Salads"]
-    let nameFileSecondScreen = ["chicken_salad", "chicken_leg", "chicken_grilled", "chicken_cebab", "chicken_fly"]
+    let nameFileSecondScreen = ["chicken_salad", "chicken_leg", "chicken_grilled", "chicken_cebab", "chichen_fly"]
     let descriptionSecondScreen = [
                                     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
                                    "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens",
@@ -27,17 +27,32 @@ class FDInitCoreData: NSObject {
         let myManagedContext = applicationDelegate.managedObjectContext
         return myManagedContext
     }()
-    
-    override init() {
-        super.init()
-        let fetchRequest = NSFetchRequest(entityName: "MainDishes")
+    static func getManagedObjects(entityNameEnter: String) -> [NSManagedObject] {
+        let fetchRequest = NSFetchRequest(entityName: entityNameEnter)
         var result = [NSManagedObject]()
         do {
             result = try FDInitCoreData.managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
-        }catch let error as NSError{
-            print(error.userInfo)
+        } catch let error as NSError {
+            print( error.localizedDescription)
         }
-        if result.count != 0 {
+        return result
+    }
+    override init() {
+        super.init()
+        let result = FDInitCoreData.getManagedObjects("MainDishes")
+         if result.count != 0 {
+            let results = result as! [MainDishes]
+            for item in results {
+                for itemDish in item.mainDishesToItemDish! {
+                    (itemDish as! ItemDish).coutOfDish = 1
+                }
+            }
+            deleteOrder()
+            do {
+            try FDInitCoreData.managedContext.save()
+            } catch let error as NSError {
+                print (error.localizedDescription)
+            }
             return
         }
         for i in 0 ..< nameFileFirstScreen.count {
@@ -49,7 +64,7 @@ class FDInitCoreData: NSObject {
             dish.nameOfFilePicture = nameFileFirstScreen[i]
             dish.name = nameLabelFirstScreen[i]
         }
-        deleteOrder()
+        
         do {
        try FDInitCoreData.managedContext.save()
         } catch let error as NSError {
@@ -79,21 +94,16 @@ class FDInitCoreData: NSObject {
             item.name = nameOfDishSecondScreen[i]
             item.descriptionDish = descriptionSecondScreen[i]
             item.picture = nameFileSecondScreen[i]
-            item.price = priceOfDish[i]
+            item.price = Float(priceOfDish[i])
             item.itemDishToMainDishes = itemMainDish
+            item.coutOfDish = 1
             set.addObject(item)
         }
         return set
     }
     func deleteOrder() {
-        let fetchRequest = NSFetchRequest(entityName: "Order")
-        var result = [NSManagedObject]()
-        do {
-            result = try FDInitCoreData.managedContext.executeRequest(fetchRequest) as! [NSManagedObject]
-        }catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        if result.count != 0 {
+                let result = FDInitCoreData.getManagedObjects("Order")
+               if result.count != 0 {
             for itemOrder in result {
                 FDInitCoreData.managedContext.deleteObject(itemOrder)
             }

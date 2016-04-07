@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="ItemDish" representedClassName="ItemDish" syncable="YES">
+        <attribute name="coutOfDish" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="descriptionDish" attributeType="String" syncable="YES"/>
         <attribute name="hasNats" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
@@ -20,7 +21,7 @@
         <relationship name="orderItemDish" maxCount="1" deletionRule="Nullify" destinationEntity="ItemDish" inverseName="itemDishOrder" inverseEntity="ItemDish" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ItemDish" positionX="-63" positionY="0" width="128" height="165"/>
+        <element name="ItemDish" positionX="-63" positionY="0" width="128" height="180"/>
         <element name="MainDishes" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="Order" positionX="-45" positionY="45" width="128" height="75"/>
     </elements>

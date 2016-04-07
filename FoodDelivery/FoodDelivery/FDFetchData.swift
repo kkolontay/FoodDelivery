@@ -19,6 +19,7 @@ class FDGetPicture {
 class FDFetchData: NSObject {
     private var images: [UIImage]?
     private var nameDish: [String]?
+    private var itemsMainDish: [MainDishes]?
     override init() {
         super.init()
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -28,6 +29,7 @@ class FDFetchData: NSObject {
         let fetchRequest = NSFetchRequest(entityName: "MainDishes")
         do {
             if let results = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject] {
+                itemsMainDish = results as? [MainDishes]
                 for result in results {
                     if let itemNameDishe = result.valueForKey("name") as? String, let nameImage = result.valueForKey("nameOfFilePicture") as? String {
                         nameDish?.append(itemNameDishe)
@@ -48,5 +50,8 @@ class FDFetchData: NSObject {
     }
     func fetchCountItems() -> Int{
         return (images?.count)!
+    }
+    func getItemAtIndex(index: Int) -> MainDishes  {
+        return itemsMainDish![index]
     }
 }

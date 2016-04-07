@@ -20,10 +20,45 @@ class FDDetailCellDish: UITableViewCell {
     @IBOutlet weak var vegetarianLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var countOfDishLabel: UILabel!
+    @IBOutlet weak var distanceToImageView: NSLayoutConstraint!
+    private var itemDish: ItemDish?
     @IBAction func decrementCountOfDish(sender: AnyObject) {
     }
     @IBAction func incrementCountOfDish(sender: AnyObject) {
     }
     @IBAction func addOrder(sender: AnyObject) {
+    }
+    func setItem(item: ItemDish) {
+        itemDish = item
+        setNameDishLable(item.name!)
+        setDishImageViewCell(item.picture!)
+        setDescriptionTextFieldCell(item.descriptionDish!)
+        hasNutsField(item.hasNats)
+        hasVegetarianField(item.vegeterian)
+        fetchpriceLabel(item.price)
+        fetchcountOfDishLambe(Int(item.coutOfDish))
+    }
+    func setNameDishLable(name: String) {
+        nameDishLabel.text = name
+    }
+    func setDishImageViewCell(name: String) {
+        dishImageView.image = FDGetPicture.getPicture(name)
+    }
+    func setDescriptionTextFieldCell(text: String) {
+        descriptionTextField.text = text
+    }
+    func hasNutsField(has: Bool) {
+            nutsImage.hidden = !has
+            hasNutsLabel.enabled = !has
+    }
+    func hasVegetarianField(has: Bool) {
+        vegetarianImage.hidden = !has
+        vegetarianLabel.enabled = !has
+    }
+    func fetchpriceLabel(price: Float) {
+        priceLabel.text = String(format: "£ %.2f", price)
+    }
+    func fetchcountOfDishLambe(count: Int) {
+        countOfDishLabel.text = String(format: "%d", count)
     }
 }
