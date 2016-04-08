@@ -20,6 +20,9 @@ class FDFetchDataOrder: NSObject {
     func fetchItemAtIndex(index: Int) -> Order {
         return itemsOrder![index]
     }
+    func fetchPriceItemAtIndex(index: Int) -> Double {
+        return Double(itemsOrder![index].quantity) * Double((itemsOrder![index].orderItemDish?.price)!)
+    }
     func totalCost() -> Double {
         var total = 0.0
         for item in itemsOrder! {

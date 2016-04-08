@@ -9,7 +9,9 @@
 import UIKit
 import CoreData
 
-
+protocol FDDetailListDelegate {
+    func callWindow()
+}
 class FDDetailCellDish: UITableViewCell {
     
     @IBOutlet weak var nameDishLabel: UILabel!
@@ -23,9 +25,12 @@ class FDDetailCellDish: UITableViewCell {
     @IBOutlet weak var countOfDishLabel: UILabel!
     @IBOutlet weak var distanceToImageView: NSLayoutConstraint!
     private var itemDish: ItemDish?
+     var delegate: FDDetailListDelegate?
     @IBAction func decrementCountOfDish(sender: AnyObject) {
+        if itemDish?.coutOfDish > 1 {
         itemDish?.coutOfDish = (itemDish?.coutOfDish)! - 1
         fetchcountOfDishLambe(Int((itemDish?.coutOfDish)!))
+        }
         
     }
     @IBAction func incrementCountOfDish(sender: AnyObject) {
@@ -49,6 +54,7 @@ class FDDetailCellDish: UITableViewCell {
         }catch let error as NSError {
             print(error.localizedDescription)
         }
+        delegate?.callWindow()
     }
     func setItem(item: ItemDish) {
         itemDish = item
